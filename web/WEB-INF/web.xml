@@ -11,14 +11,25 @@
             controller.WebController
         </servlet-class>
     </servlet>
-    <servlet>
+    <!--<servlet>
         <servlet-name>ItemController</servlet-name>
         <servlet-class>controller.ItemController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>OrderController</servlet-name>
         <servlet-class>controller.OrderController</servlet-class>
+    </servlet>-->
+
+    <servlet>
+        <servlet-name>front-controller</servlet-name>
+        <servlet-class>
+            controller.FrontController
+        </servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>front-controller</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>
@@ -28,12 +39,12 @@
             /test
         </url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
+    <!--<servlet-mapping>
         <servlet-name>ItemController</servlet-name>
         <url-pattern>/item</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>OrderController</servlet-name>
         <url-pattern>/order</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> -->
 </web-app>

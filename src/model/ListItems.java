@@ -8,9 +8,9 @@ public class ListItems {
     private ArrayList<Item> itemList = new ArrayList<Item>();
 
     public ListItems() {
-        itemList.add(new Item(1, "Ноутбуки"));
-        itemList.add(new Item(2,"ПК"));
-        itemList.add(new Item(3,"Комплектующие"));
+        itemList.add(Item.builder().id(1).name("Ноутбуки").build());
+        itemList.add(Item.builder().id(2).name("ПК").build());
+        itemList.add(Item.builder().id(3).name("Комплектующие").build());
 
     }
 

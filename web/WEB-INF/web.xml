@@ -3,17 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <servlet>
-        <servlet-name>
-            WebController
-        </servlet-name>
-        <servlet-class>
-            controller.WebController
-        </servlet-class>
-    </servlet>
+
     <!--<servlet>
-        <servlet-name>ItemController</servlet-name>
-        <servlet-class>controller.ItemController</servlet-class>
+        <servlet-nItemCommandller</servlet-name>
+        <servlet-clcontroller.ItemCommandr</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>OrderController</servlet-name>
@@ -31,6 +24,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--<servlet>
+        <servlet-name>
+            WebController
+        </servlet-name>
+        <servlet-class>
+            controller.WebController
+        </servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>
             WebController
@@ -39,8 +40,8 @@
             /test
         </url-pattern>
     </servlet-mapping>
-    <!--<servlet-mapping>
-        <servlet-name>ItemController</servlet-name>
+    <servlet-mapping>
+        <servlet-nItemCommandller</servlet-name>
         <url-pattern>/item</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

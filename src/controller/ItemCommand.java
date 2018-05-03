@@ -11,13 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class ItemController extends FrontCommand {
+public class ItemCommand extends FrontCommand {
     @Override
     public void process() throws ServletException, IOException {
         ListItems list = new ListItems();
         HttpSession session = request.getSession(true);
         request.setAttribute("list", list.getItemList());
-        request.setAttribute("order", session.getAttribute("order"));
+//        request.setAttribute("order", session.getAttribute("order"));
         forward("itemList");
 //        request.getRequestDispatcher("/WEB-INF/views/itemList.jsp").forward(request, response);
     }

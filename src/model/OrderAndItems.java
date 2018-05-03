@@ -1,37 +1,23 @@
 package model;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Builder;
+
+import javax.persistence.Entity;
+
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
 public class OrderAndItems {
     private int id;
     private Item item;
     private Order order;
 
-    public OrderAndItems (int id, Item item, Order order) {
-        this.id = id;
-        this.item = item;
-        this.order = order;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
-    public Order getOrder() {
-        return order;
-    }
-
-    public void setOrder(Order order) {
-        this.order = order;
-    }
 }

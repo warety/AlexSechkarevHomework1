@@ -11,8 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class ItemController extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class ItemController extends FrontCommand {
+    @Override
+    public void process() throws ServletException, IOException {
+        ListItems list = new ListItems();
+        HttpSession session = request.getSession(true);
+        request.setAttribute("list", list.getItemList());
+        request.setAttribute("order", session.getAttribute("order"));
+        forward("itemList");
+//        request.getRequestDispatcher("/WEB-INF/views/itemList.jsp").forward(request, response);
+    }
+    /*protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ListItems list = new ListItems();
         HttpSession session = request.getSession(true);
         request.setAttribute("list", list.getItemList());
@@ -40,5 +49,5 @@ public class ItemController extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/views/test.jsp").forward(request, response);
     }
 
-
+*/
 }
